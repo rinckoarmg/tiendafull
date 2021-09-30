@@ -16,7 +16,7 @@
             $.each(data, function(i, item){
                 lista = document.getElementById("myTable");
                 var tr =document.createElement("tr");
-                ver columna1 = document.createElement("td");
+                var columna1 = document.createElement("td");
                 columna1.innerHTML = item.cedula_usuario;
                 var columna2 = document.createElement("td");
                 columna2.innerHTML = item.email_usuario;
@@ -27,9 +27,9 @@
                 var columna5 = document.createElement("td");
                 columna5.innerHTML = item.usuario;
                 var columna6 = document.createElement("td");
-                columna6.innerHTML = "<a class="btn btn-primary btn-sm" href = 'usuarios/eliminar/?cedula="+item.cedula_usuario+"'>Eliminar</a>";
+                columna6.innerHTML = "<a class='btn btn-primary btn-sm' href = 'usuarios/eliminar/"+item.cedula_usuario+"'>Eliminar</a>";
                 var columna7 = document.createElement("td");
-                columna7.innerHTML = "<a class="btn btn-primary btn-sm" href = 'usuarios/modificar/?cedula="+item.cedula_usuario+"'>Editar</a>";
+                columna7.innerHTML = "<a class='btn btn-primary btn-sm' href = 'usuarios/modificar/?cedula="+item.cedula_usuario+"'>Editar</a>";
 
                 lista.appendChild(tr);
                 tr.appendChild(columna1);
@@ -78,25 +78,7 @@
 		    </tr>
 		  </thead>
 		  <tbody id = "myTable">
-		    <tr>
-		      <th scope="row">123456</th>
-		      <td></td>
-		      <td>admininicial</td>
-		      <td>admin123456</td>
-		      <td>admininicial</td>
-		      <!-- 'a' sirve para mandar a una referencia externa: -->
-		      <td> <a class="btn btn-primary btn-sm" href="formulario_usuarios.jsp?cedulaUsuario=<% %>">Modificar</a></td>
-		      <td> <button class="btn btn-primary btn-sm">Eliminar</button></td>
-		    </tr>
-		    <tr>
-		      <th scope="row">4567890123</th>
-		      <td>david@mitienda.com</td>
-		      <td>David</td>
-		      <td>david123456</td>
-		      <td>david01</td>
-		      <td> <a class="btn btn-primary btn-sm" href="formulario_usuarios.jsp?cedulaUsuario=<% %>">Modificar</a></td>
-		      <td> <button class="btn btn-primary btn-sm">Eliminar</button></td>
-		    </tr>
+		   
 		  </tbody>
 		</table> 
 	</div>
